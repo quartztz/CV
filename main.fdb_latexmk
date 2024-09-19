@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1726784072.52341 "/Users/quartztz/pers/CV/main.tex" "main.pdf" "main" 1726784074.06146 0
-  "/Users/quartztz/pers/CV/main.tex" 1726784060.09649 4494 94aba1f1554acec22b2d53834c581cfb ""
+["pdflatex"] 1726784082.70431 "/Users/quartztz/pers/CV/main.tex" "main.pdf" "main" 1726784084.64071 0
+  "/Users/quartztz/pers/CV/main.tex" 1726784082.19689 4992 971aeafbfef118e7d661d51445a0af33 ""
   "/usr/local/Cellar/texlive/20240312/share/texmf-dist/fonts/map/fontname/texfonts.map" 1710106625 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/Cellar/texlive/20240312/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1710106625 5472554 f7861620179a71a79d4bd86251f559d0 ""
   "/usr/local/Cellar/texlive/20240312/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1710106625 1004 54797486969f23fa377b128694d548df ""
@@ -73,9 +73,9 @@
   "/usr/local/Cellar/texlive/20240312/share/texmf-dist/tex/latex/url/url.sty" 1710106625 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/Cellar/texlive/20240312/share/texmf-dist/web2c/texmf.cnf" 1721044131.71943 41652 e14926ab86fde7902cad99d9eeaa5ca5 ""
   "/usr/local/Cellar/texlive/20240312/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1710106625 8221826 63722d063666b4cb088d6804a4887240 ""
-  "main.aux" 1726784073.63167 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
-  "main.out" 1726784073.19563 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1726784060.09649 4494 94aba1f1554acec22b2d53834c581cfb ""
+  "main.aux" 1726784084.44996 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
+  "main.out" 1726784083.98173 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1726784082.19689 4992 971aeafbfef118e7d661d51445a0af33 ""
   (generated)
   "main.aux"
   "main.log"

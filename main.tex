@@ -1,83 +1,94 @@
-\documentclass[11pt]{article}
+\documentclass[10pt]{article}
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.75in]{geometry}
 \usepackage{changepage}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{xcolor}
 
 \def\labelitemi{\ensuremath{\triangleright}}
 \renewcommand{\url}[1]{{\texttt{#1}}}
-\renewcommand{\line}[2]{{\vspace{4pt} \large \noindent\textsc{#1} \hfill #2}\vspace{4pt}}
+\renewcommand{\line}[2]{{\vspace{4pt} \large \noindent\textsc{#1} \hfill \small{#2}}\vspace{4pt}}
+
 
 \begin{document}
+
+  \setlength{\parindent}{0em}
+
   \begin{center}
-    \huge Jacopo Philip Moretti
+    \begin{minipage}[C]{0.66\textwidth}
+      \begin{center}
+        \huge Jacopo Philip Moretti
+      \end{center}
+      \textit{Étudiant en MA1 à l'EPFL, avec des intérêts dans les prouveurs de théorèmes, la vérification formelle et les langages, tant naturels que de programmation.}
+
+      18.08.03 :: +41 76 730 67 19 :: Chemin des Triaudes, 4b, 1015 Ecublens
+      \vspace{-0.75em}
+      \begin{center}
+        \href{https://people.epfl.ch/jacopo.moretti}{\url{email}} :: \href{https://github.com/quartztz}{\url{github}} :: \href{https://quartztz.github.io}{\url{site web}}
+      \end{center}
+    \end{minipage}
   \end{center}
 
-  \begin{adjustwidth}{1in}{1in}
-    \textit{Étudiant en IN MA1 à l'EPFL, intéréssé par l'informatique théorique, les systèmes de preuve, et les langages, naturels et de programmation.}
+  \subsection*{Académique}
 
-    \noindent 18.08.03 :: +41 76 730 67 19 :: Chemin des Triaudes, 4b, 1015 Ecublens
-    
-    \noindent \href{https://people.epfl.ch/jacopo.moretti}{\url{jacopo.moretti@epfl.ch}}
-    
-    \noindent \href{https://github.com/quartztz}{\url{github}}
-  \end{adjustwidth}
+  \line{MSc en Informatique :: EPFL}{09.2024 - 2026}
 
-  \section*{Academic}
+  Master en Informatique à l'\textit{École Polytechnique Fédérale de Lausanne} (EPFL); fin prévue en 2026.
 
-  \line{MSc en Informatique - EPFL}{2024 - 2026}
+  Intérêts: Prouveurs de théorèmes, Compilateurs, Traitement automatique du langage naturel.
 
-  En première année de Master d'Informatique à l'EPFL. Année de complétion prévue: 2026. Champs d'intérêt: Systèmes de preuve, \textit{Large Language Models}.  
-  \vspace{1em}
+  Cours: \textit{Algorithms II (CS450), Machine Learning (CS433), Formal Verification (CS550)}.
+  \vspace{0.5em}
 
-  \line{BSc En Informatique- EPFL}{09.2021 - 07.2024}
+  \line{BSc en Informatique :: EPFL}{09.2021 - 07.2024}
 
-  Bachelor d'informatique de l'\textit{Ecole Polytechnique Fédérale de Lausanne} (EPFL). Champs d'intérêt: Langages de Programmation, Systèmes de preuve. 
+  Bachelor en Informatique à l'\textit{École Polytechnique Fédérale de Lausanne} (EPFL).
 
-  Cours principaux:
-  \begin{itemize}
-    \item \textit{Algorithms} (CS250): Introduction aux structures de données, analyse de la complexité, conception d'algorithmes. \textit{Complété (5/6).}
-    \item \textit{Functional Programming} (CS207): Introduction aux notions de la programmation fonctionnelle, récursion, lambda calcul et execution symbolique. Pratique du Scala. \textit{Complété (5.75/6).}
-    \item \textit{Computer Language Processing} (CS320): Comprendre le pipeline d'un compilateur, implementer ses étapes lors d'un projet en Scala. \textit{Complété (5.5/6).}
-    \item \textit{Logique Mathématique} (MATH381): Théorie des modèles et de la démonstration, théorie des ensembles. Syntaxe et sémantique dans la logique du premier ordre. \textit{Complété.}
-    \item \textit{The Software Enterprise - from ideas to products} (CS311) : Compétences de programmation en équipe, à la fois techniques (\texttt{git}) et sociales (\textit{Agile programming}, SCRUM), dans le cadre d'un projet sur un semestre. Scored ``Best Project" award with the ActualIA, an LLM-powered news aggregator. \textit{Complété (4.75/6).}
+  Intérêts: Programmation fonctionnelle, Compilateurs.
 
-  \end{itemize}
+  Cours: \textit{Algorithms (CS250), Functional Programming (CS207), Computer Language Processing (CS320), Logique Mathématique (MATH381), Software Enterprise (CS311)}.
+  \vspace{0.5em}
 
-  \line{French Baccalauréat}{June 2021}
+  \line{Baccalauréat Français}{06.2021}
 
-  \textit{Mention Très Bien avec Félicitations du Jury} du Lycée Chateaubriand de Rome (18.06/20). Obtenu en même temps que l'\textit{Esame di Stato} (100/100 avec \textit{Félicitations}).
+  \textit{Mention Très Bien avec Félicitations du Jury} du Lycée Chateaubriand de Rome (18.06/20). Obtenu avec le \textit{Esame di Stato} italien (100/100).
 
-  \section*{Professional}
+  \subsection*{Professionnel}
 
-  \line{Assistant Étudiant:: Software Construction}{Winter Semester, 23/24}
+  \line{Directeur Produit :: actualia}{08.2024 - \textsc{Présent}}
 
-    Assistant Étudiant sous Prof. Pit-Claudel, Prof. Odersky and Prof. Kunčak. J'ai gagné de l'expérience dans l'assistanat, à la fois en ligne et en classe, ainsi que l'enregistrement et le montage de vidéos pour la \href{https://mediaspace.epfl.ch/channel/CS-214+Software+construction/56193}{\url{chaîne Mediaspace du cours}}.
+  Directeur Produit chez \textit{actualia}, une startup créant une application de revue de presse personnalisée. Gestion de l'équipe de design et direction du développement frontend.
 
-  \line{Assistant Étudiant :: Students 4 Students}{2022, 2023}
-  \line{Assistant Étudiant :: Students 4 Students}{2022, 2023}
+  \textit{Figma, Flutter}
 
-  Assistant Étudiant pour l'association étudiante \textit{Students 4 Students}: j'ai aidé à la conception de cours et séries d'éxercices en Analyse, Algèbre Linéaire et Mathématiques Discrètes, ainsi qu'à l'assistanat pendant les séances d'exercice.
+  \line{Assistant étudiant :: Software Construction (CS214)}{Automne 2023}
 
-  \line{Directeur technique :: Fréquence Banane}{Mai 2022 - Mai 2024}
+  Assistant étudiant pour les Profs. Odersky, Pit-Claudel, et Kunčak. Réponse aux questions de plus de 100 étudiant·e·s sur les forums et en salle, et mise en place d'un flux de montage des vidéos de cours en 24h.
 
-  Membre du comité chargé de maintenir l'infrastructure informatique et audiovisuelle d'une association étudiante à 80+ membres, j'ai gagné des connaissances vis-à-vis de l'introduction et du développement d'outils techniques sur grande échelle, gestion d'équipe, et de l'audiovisuel pour des manifestations festives et de divulgation scientifique.
+  \textit{Scala, LaTeX, Enseignement}
 
-  \line{Professeur de soutien}{2021-2023}
-  \line{Professeur de soutien}{2021-2023}
+  \line{Assistant étudiant :: Students 4 Students}{2022, 2023}
 
-  Professeur de soutien particulier en Mathématiques, Physique, Informatique et Littérature Française pour des élèves en âge de lycée.
+  Bénévole chez \textit{Students 4 Students}, développement de cours et de séries d'exercices d'Analyse, d'Algèbre Linéaire et de Mathématiques Discrètes. Tutorat pendant les séances d'exercices.
 
-  \section*{Compétences}
-  
-  \begin{adjustwidth}{1in}{}
+  \line{Responsable Technique :: Fréquence Banane}{05.2022 - 05.2024}
+
+  Membre du comité chargé de la maintenance de l'infrastructure technique (audiovisuelle et serveur) d'une radio étudiante de plus de 80 membres et 400+ auditeurs mensuels. Direction de la refonte du site web. Acquisition de connaissances en écriture de code pour une utilisation à grande échelle et à long terme, gestion d'une équipe technique et ingénierie audio.
+
+  \textit{Python, VueJS, Astro}
+
+  \subsection*{Compétences}
+
+  \begin{adjustwidth}{}{}
     \begin{itemize}
-      \item[\textbf{Mathematics}] Self-taught practice of the Coq interactive theorem prover. Particular interest in the fields of algebra and number theory, as well as model and proof theory. 
-      \item[\textbf{Programming}] Object oriented and functional programming, as well as basics of web frameworks. Languages \textit{(in order of proficiency and preferred usage)}: Scala, Rust, Python, C, Java. 
-      \item[\textbf{Teaching}] LaTeX/Typst typesetting, course conception (theory, exercices), tutoring.
-      \item[\textbf{Languages}] Italian: Native \\ French: Fluent \\ English: Fluent
+      \item[] \textbf{Langues} : Italien (natif), Français (courant), Anglais (courant), Allemand (notions de base).
+      \item[] \textbf{Programmation} : Fonctionnelle (Scala), Systèmes (Java, C, Rust), Web (\{Java, Type\}Script, WASM).
     \end{itemize}
   \end{adjustwidth}
+
+  \subsection*{Récompenses}
+
+  \textit{Gagnant de la Battle of The Apps, prix décerné par le Prof. Candea pour le meilleur projet dans le cours de génie logiciel (CS311) à l'EPFL. Le projet, ActualIA, a finalement été développé en une startup.}
 
 \end{document}

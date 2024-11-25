@@ -1,8 +1,9 @@
 \documentclass[11pt]{article}
 
-\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{changepage}
 \usepackage{hyperref}
+\usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{xcolor}
 
@@ -10,24 +11,33 @@
 \renewcommand{\url}[1]{{\texttt{#1}}}
 \renewcommand{\line}[2]{{\vspace{4pt} \large \noindent\textsc{#1} \hfill \small{#2}}\vspace{0pt}}
 
+\newif\ifisleft
+%\islefttrue % Uncomment to put name to the left
+
 \begin{document}
 
   \setlength{\parindent}{0em}
   \pagestyle{empty}
 
   \begin{center}
-    \begin{minipage}[C]{0.66\textwidth}
-      \begin{center}
-        \huge Jacopo Philip Moretti
-      \end{center}
-      \textit{IN MA1 student at EPFL, with interests in theorem provers, formal verification, and languages, both natural and programming.}
+  \noindent\begin{minipage}{0.66\textwidth}
+    \begin{center}
+      \huge Jacopo Philip Moretti
+    \end{center}
+    \textit{CS MS student at EPFL, with interests in theorem provers, formal verification, and languages, both natural and programming.}
 
-      18.08.03 :: +41 76 730 67 19 :: Chemin des Triaudes, 4b, 1015 Ecublens
-      \vspace{-0.75em}
+    18.08.03 :: +41 76 730 67 19 :: Chemin des Triaudes, 4b, 1015 Ecublens
+    \begin{center}
+      \href{https://people.epfl.ch/jacopo.moretti}{\url{email}} :: \href{https://github.com/quartztz}{\url{github}} :: \href{https://quartztz.github.io}{\url{website}}
+    \end{center}
+  \end{minipage}
+  \ifisleft
+    \begin{minipage}{0.25\textwidth}
       \begin{center}
-        \href{https://people.epfl.ch/jacopo.moretti}{\url{email}} :: \href{https://github.com/quartztz}{\url{github}} :: \href{https://quartztz.github.io}{\url{website}}
+        \includegraphics[width=.9\textwidth]{example-image-a}
       \end{center}
     \end{minipage}
+  \fi
   \end{center}
 
   \subsection*{Academic}
@@ -35,6 +45,8 @@
   \line{MSc in Computer Science :: EPFL}{2024 - \textsc{Present}}
 
   Master's Degree in Computer Science at the \textit{Ecole Polytechnique Fédérale de Lausanne} (EPFL); projected end in 2026.
+
+  \textbf{Specialization:} \textit{Foundations of Software}.
 
   \textbf{Fields of interest:} Theorem Proving, Programming Languages, Natural Language Processing.
 
@@ -49,21 +61,21 @@
 
   \textbf{Relevant courses:} \textit{Algorithms (CS250), Functional Programming (CS207), Computer Language Processing (CS320), Logique Mathématique (MATH381), Software Enterprise (CS311)}.
 
-\textbf{Awards:} \textit{1st place in the Battle of The Apps, a prize awarded by Prof. Candea for the best projects in the CS311 course (2023).}
+\textbf{Awards:} \textit{1st place in the Battle of The Apps, prize awarded by Prof. Candea for the best project in the CS311 course (2023).}
   \subsection*{Experience}
 
   \line{Chief Product Officer :: actualia}{2024 - \textsc{Present}}
 
   CPO at \textit{actualia}, a startup creating a personalized press review app. Managed design team and led frontend development.
 
-  \textbf{Skills:} \textit{Figma, Flutter}
+  \textbf{Skills:} \textit{Design (Figma), Android Mobile Development (Flutter, Dart, Bloc)}
   \vspace{0.75em}
 
   \line{Student Assistant :: Software Construction (CS214)}{FW 2023}
 
   Student Assistant for Profs. Odersky, Pit-Claudel, and Kunčak. Answered 100+ student queries on forums, explained concepts in class, and implemented a workflow for recording and editing 20+ course videos.
 
-  \textbf{Skills:} \textit{Scala, LaTeX, Teaching}
+  \textbf{Skills:} \textit{Functional Programming (Scala), Video Editing (DaVinci Resolve), \emph{\texttt{git}}}
   \vspace{0.75em}
 
   \line{Student Assistant :: Students 4 Students}{2022, 2023}
@@ -82,7 +94,7 @@
     \begin{itemize}
       \item[\textbf{Languages}] Italian (native), French (native), English (fluent), German (basic).
       \item[\textbf{Programming}] Scala, Java, Rust, C, Python, Dart, \{Java, Type\}Script.
-      \item[\textbf{Design}] Adobe Illustrator, Figma.
+      \item[\textbf{Design}] Adobe Suite, Figma.
     \end{itemize}
   \end{adjustwidth}
 

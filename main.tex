@@ -6,18 +6,46 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{xcolor}
+\usepackage{xparse}
 
 \def\labelitemi{\ensuremath{\triangleright}}
 \renewcommand{\url}[1]{{\texttt{#1}}}
 \renewcommand{\line}[2]{{\vspace{4pt} \large \noindent\textsc{#1} \hfill \small{#2}}\vspace{0pt}}
 
 \newif\ifisleft
-%\islefttrue % Uncomment to put name to the left
+% \isleftfalse % by default
+
+%%% Get an environment variable from latex. %%%
+% Shamelessly stolen from https://tex.stackexchange.com/questions/62010/can-i-access-system-environment-variables-from-latex-for-instance-home
+\ExplSyntaxOn
+
+\NewDocumentCommand{\getenv}{om}
+{
+\sys_get_shell:nnN { kpsewhich ~ --var-value ~ #2 } { } \l_tmpa_tl
+\tl_trim_spaces:N \l_tmpa_tl
+\IfNoValueTF { #1 }
+  {
+  \tl_use:N \l_tmpa_tl
+  }
+  {
+  \tl_set_eq:NN #1 \l_tmpa_tl
+  }
+}
+
+\NewDocumentCommand{\strcmp}{mmmm}{
+  \str_if_eq:eeTF{#1}{#2}
+    { #3 }
+    { #4 }
+}
+
+\ExplSyntaxOff
 
 \begin{document}
 
   \setlength{\parindent}{0em}
   \pagestyle{empty}
+
+  \getenv[\withpic]{WITHPIC}
 
   \begin{center}
   \noindent\begin{minipage}{0.66\textwidth}
@@ -31,13 +59,15 @@
       \href{https://people.epfl.ch/jacopo.moretti}{\url{email}} :: \href{https://github.com/quartztz}{\url{github}} :: \href{https://quartztz.github.io}{\url{website}}
     \end{center}
   \end{minipage}
-  \ifisleft
+  \strcmp{\withpic}{true}{
     \begin{minipage}{0.25\textwidth}
       \begin{center}
-        \includegraphics[width=.9\textwidth]{example-image-a}
+        \includegraphics[width=.75\textwidth]{"./assets/img_circ.png"}
       \end{center}
     \end{minipage}
-  \fi
+  }{
+    % empty
+  }
   \end{center}
 
   \subsection*{Academic}

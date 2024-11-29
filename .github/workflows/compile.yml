@@ -2,24 +2,24 @@ name: Compile CV
 run-name: Compiling all of the CVs according to options !
 on:
   push:
-    branches: [ main, feat/github-actions ]
+    branches: [ master, feat/github-actions ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: docker://latex:latest
     steps:
       - name: checkout code
         uses: actions/checkout@v3
 
       - name: compile CV
-        uses: dante-ev/latex-action@latest
-        with:
-          root_file: main.tex
+        runs: pdflatex -jobname=cv main.tex
 
       - name: upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: cv.pdf
-          path: ./main.pdf
+          path: ./cv.pdf

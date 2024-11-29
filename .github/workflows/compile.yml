@@ -18,13 +18,13 @@ jobs:
         run: ls
 
       - name: compile CV without picture
-        run: pdflatex --output-directory="out" -jobname=cv main.tex
+        run: pdflatex --no-shell-escape --output-directory="out" -jobname=cv main.tex
 
       - name: set environment variable
         run: export WITHPIC="true"
 
       - name: compile CV with picture
-        run: pdflatex --output-directory="out" -jobname=cv_pic main.tex
+        run: pdflatex --no-shell-escape --output-directory="out" -jobname=cv_pic main.tex
 
       - name: upload artifact
         uses: actions/upload-artifact@v4

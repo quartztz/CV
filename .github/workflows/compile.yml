@@ -18,7 +18,7 @@ jobs:
           wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh; chmod +x latexdockercmd.sh
 
       - name: compile CV without picture
-        run: .latexdockercmd.sh pdflatex -jobname=cv main.tex
+        run: ./latexdockercmd.sh pdflatex -jobname=cv main.tex
 
       - name: upload artifact
         uses: actions/upload-artifact@v4

@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: compile CV
-        runs: pdflatex -jobname=cv main.tex
+        run: pdflatex -jobname=cv main.tex
 
       - name: upload artifact
         uses: actions/upload-artifact@v4

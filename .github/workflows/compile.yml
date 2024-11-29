@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: blang/latex
+      image: blang/latex-docker
     steps:
       - name: checkout code
         uses: actions/checkout@v3

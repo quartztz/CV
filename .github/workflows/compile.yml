@@ -15,10 +15,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: compile CV without picture
-        run: pdflatex -jobname=cv main.tex
+        run: pdflatex --output-directory="out" -jobname=cv main.tex
+
+      - name: set environment variable
+        run: export WITHPIC="true"
+
+      - name: compile CV with picture
+        run: pdflatex --output-directory="out" -jobname=cv_pic main.tex
 
       - name: upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cv.pdf
-          path: ./cv.pdf
+          name: CVs
+          path: ./out

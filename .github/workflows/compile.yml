@@ -14,8 +14,8 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v3
 
-      - name: "[DEBUG] list directory content"
-        run: ls
+      - name: clean up
+        run: rm *.pdf
 
       - name: compile CV without picture
         run: pdflatex --no-shell-escape --output-directory="out" -jobname=cv main.tex

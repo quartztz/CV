@@ -15,8 +15,7 @@ jobs:
 
       - name: setup docker
         run: |
-          wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh |
-          chmod +x latexdockercmd.sh
+          wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh; chmod +x latexdockercmd.sh
 
       - name: compile CV without picture
         run: .latexdockercmd.sh pdflatex -jobname=cv main.tex

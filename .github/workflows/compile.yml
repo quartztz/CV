@@ -1,5 +1,5 @@
 name: Compile CV
-run-name: Compiling all of the CVs according to options !
+run-name: Compiling CVs according to options !
 on:
   push:
     branches: [ master, feat/github-actions ]
@@ -15,16 +15,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: clean up
-        run: rm *.pdf
-
-      - name: compile CV without picture
-        run: pdflatex --no-shell-escape --output-directory="out" -jobname=cv main.tex
-
-      - name: set environment variable
-        run: export WITHPIC="true"
-
-      - name: compile CV with picture
-        run: pdflatex --no-shell-escape --output-directory="out" -jobname=cv_pic main.tex
+        run: make clean
+      
+      - name: build pdfs
+        run: make all
 
       - name: upload artifact
         uses: actions/upload-artifact@v4

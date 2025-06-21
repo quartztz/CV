@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.7in]{geometry}
 \usepackage{changepage}
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -10,13 +10,14 @@
 
 \def\labelitemi{\ensuremath{\triangleright}}
 \renewcommand{\url}[1]{{\texttt{#1}}}
-\renewcommand{\line}[2]{{\vspace{4pt} \large \noindent\textsc{#1} \hfill \small{#2}}\vspace{0pt}}
+\renewcommand{\line}[2]{{\vspace{12pt} \large \noindent\textbf{\textsc{#1}} \hfill \small{#2}}{\vspace{2pt}\hrule\vspace{4pt}}}
 
 \newif\ifisleft
 % \isleftfalse % by default
 
 %%% Get an environment variable from latex. %%%
-% Shamelessly stolen from https://tex.stackexchange.com/questions/62010/can-i-access-system-environment-variables-from-latex-for-instance-home
+% Shamelessly stolen from 
+% https://tex.stackexchange.com/questions/62010/can-i-access-system-environment-variables-from-latex-for-instance-home
 \ExplSyntaxOn
 
 \NewDocumentCommand{\getenv}{om}
@@ -46,18 +47,19 @@
   \pagestyle{empty}
 
   \getenv[\withpic]{WITHPIC}
+  
+  \noindent\begin{minipage}{0.64\textwidth}
+    
+    {\LARGE{\textbf{Jacopo Philip Moretti}}}
 
-  \begin{center}
-  \noindent\begin{minipage}{0.66\textwidth}
-    \begin{center}
-      \huge Jacopo Philip Moretti
-    \end{center}
-    \textit{CS MS student at EPFL, with interests in theorem provers, formal verification, and languages, both natural and programming.}
+    \vspace{0.5em}
+    \textit{CS MSc student at EPFL, with interests in theorem provers, formal verification, and languages, both natural and programming.}
 
-    18.08.03 :: +41 76 730 67 19 :: Chemin des Triaudes, 4b, 1015 Ecublens
-    \begin{center}
-      \href{https://people.epfl.ch/jacopo.moretti}{\url{email}} :: \href{https://github.com/quartztz}{\url{github}} :: \href{https://quartztz.github.io}{\url{website}}
-    \end{center}
+    \vspace{0.5em}
+    {
+      \small
+      \href{https://github.com/quartztz}{\url{github.com/quartztz}} :: \url{+41 76 730 67 19} :: \url{jacopo @ }\href{https://quartztz.com}{\url{quartztz.com}}
+    }
   \end{minipage}
   \strcmp{\withpic}{true}{
     \begin{minipage}{0.25\textwidth}
@@ -68,63 +70,62 @@
   }{
     % empty
   }
-  \end{center}
 
-  \subsection*{Academic}
+  \section*{Academic}
+  \vspace{-1.5em}
 
   \line{MSc in Computer Science :: EPFL}{2024 - \textsc{Present}}
 
-  Master's Degree in Computer Science at the \textit{Ecole Polytechnique Fédérale de Lausanne} (EPFL); projected end in 2026.
+  Master's Degree in Computer Science at EPFL, \textit{Foundations of Software} specialization.
 
-  \textbf{Specialization:} \textit{Foundations of Software}.
+  \textbf{Projects:} Verified WebAssembly Decompilation, Lean formalization of theoretical CompSci result.
 
-  \textbf{Fields of interest:} Theorem Proving, Programming Languages, Natural Language Processing.
+  \textbf{Fields of interest:} Theorem Proving, Software/Hardware Verification, Programming Languages.
 
-  \textbf{Relevant courses:} \textit{Algorithms II (CS450), Machine Learning (CS433), Formal Verification (CS550)}.
+  \textbf{Relevant courses:} \textit{Interactive Theorem Proving, Foundations of Software, Algorithms II, Formal Verification}.
 
-  \vspace{0.75em}
   \line{BSc in Computer Science :: EPFL}{2021 - 2024}
 
-  Bachelor's degree in Computer Science from the \textit{Ecole Polytechnique Fédérale de Lausanne} (EPFL).
+  Bachelor's degree in Computer Science from EPFL.
 
   \textbf{Fields of interest:} Functional Programming, Programming Languages.
 
-  \textbf{Relevant courses:} \textit{Algorithms (CS250), Functional Programming (CS207), Computer Language Processing (CS320), Logique Mathématique (MATH381), Software Enterprise (CS311)}.
+  \textbf{Relevant courses:} \textit{Functional Programming, Computer Language Processing, Mathematical Logic}.
 
-\textbf{Awards:} \textit{1st place in the Battle of The Apps, prize awarded by Prof. Candea for the best project in the CS311 course (2023).}
-  \subsection*{Experience}
+  \section*{Experience}
+  \vspace{-1.5em}
 
-  \line{Chief Product Officer :: actualia}{2024 - \textsc{Present}}
+  \line{Chief Product Officer :: Actualia}{2024 - \textsc{Present}}
 
-  CPO at \textit{actualia}, a startup creating a personalized press review app. Managed design team and led frontend development.
+  CPO at \textit{actualia}, a startup building an AI-powered pipeline to deliver relevant and verifiable press reviews. 
+  Managed design team and led frontend development, raised 12k CHF in grants.
 
-  \textbf{Skills:} \textit{Design (Figma), Android Mobile Development (Flutter, Dart, Bloc)}
-  \vspace{0.75em}
+  \line{Teaching Assistant :: EPFL}{2023 - \textsc{Present}}
 
-  \line{Student Assistant :: Software Construction (CS214)}{FW 2023}
+  Teaching assistant for various courses at EPFL. Assisted students on forums and in-person.
 
-  Student Assistant for Profs. Odersky, Pit-Claudel, and Kunčak. Answered 100+ student queries on forums, explained concepts in class, and implemented a workflow for recording and editing 20+ course videos.
-
-  \textbf{Skills:} \textit{Functional Programming (Scala), Video Editing (DaVinci Resolve), \emph{\texttt{git}}}
-  \vspace{0.75em}
-
-  \line{Student Assistant :: Students 4 Students}{2022, 2023}
-
-  Volunteer at \textit{Students 4 Students}, developing classes and problem sets for Calculus, Linear Algebra, and Discrete Mathematics, and tutored during exercise sessions.
-  \vspace{0.75em}
+  \vspace{-0.5em}
+  \begin{itemize}
+    \item \textit{Formal Verification (Kuncak, F25)}: assist exercise set and lab design, VSCode extension for \href{https://github.com/epfl-lara/stainless}{\url{Stainless}}.
+    \item \textit{Computer Language Processing (Kuncak, S25)}: assisted with exercise set design and grading.
+    \item \textit{Software Construction (Kuncak, Odersky, Pit-Claudel, F23)}: (Fall 2023) implemented workflow for recording and editing 20+ video lectures per day.
+  \end{itemize}
+  \vspace{-1em}
 
   \line{Technical Manager :: Fréquence Banane}{2022 - 2024}
 
   Committee member tasked with maintaining the technical (audiovisual and server) infrastructure of an 80+ member student radio. Gained knowledge in writing code for large scale and long term use, managing a technical team, and audio engineering.
 
-  \textbf{Skills:} \textit{Python, VueJS, Astro}
-  \subsection*{Skills}
+  \section*{Skills}
 
+  \vspace{-0.5em}
   \begin{adjustwidth}{6em}{}
     \begin{itemize}
       \item[\textbf{Languages}] Italian (native), French (native), English (fluent), German (basic).
-      \item[\textbf{Programming}] Scala, Java, Rust, C, Python, Dart, \{Java, Type\}Script.
-      \item[\textbf{Design}] Adobe Suite, Figma.
+      \item[\textbf{Programming}] Rocq/Coq, Scala, Lean, Typescript, Rust, Dart, Python, React, Vue, Java, C.
+      \item[\textbf{Tools}] Git, Docker, Proxmox, Typst, LaTeX, Markdown
+      \item[\textbf{Design}] Adobe Suite, Figma, Penpot.
+      \item[\textbf{Other}] Audio Engineering, Video Editing, Stagecraft.
     \end{itemize}
   \end{adjustwidth}
 

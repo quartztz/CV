@@ -1,11 +1,16 @@
 name: Build Typst document
-on: push
+on: pull_request
 jobs:
   build_typst_documents:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
+      - name: Install fonts
+        run: |
+          curl -L -o /tmp/iosevka.zip "https://github.com/be5invis/Iosevka/releases/download/v34.0.0/PkgTTC-Iosevka-34.0.0.zip"
+          unzip /tmp/iosevka.zip
+          fc-cache -f -v
       - name: Checkout
         uses: actions/checkout@v4
       - name: Typst

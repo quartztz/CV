@@ -20,8 +20,8 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "cv.pdf"
-          body: "PDF generated from cv.pdf"
+          artifacts: "CV.pdf"
+          body: "PDF generated from CV.typ"
           commit: "main"
           tag: "latest"
           allowUpdates: true

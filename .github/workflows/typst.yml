@@ -11,18 +11,15 @@ jobs:
       - name: Typst
         uses: lvignoli/typst-action@main
         with:
-          source_file: doc/main.typ
-          options: |
-            --root
-            doc
-      - name: Get current date
-        id: date
-        run: echo "DATE=$(date +%Y-%m-%d-%H:%M | tr ':' '_')" >> $GITHUB_ENV
-      - name: Add date to PDF
-        run: |
-          for file in **/*.pdf; do
-            cp "$file" "${file%.pdf}-${{ env.DATE }}.pdf"
-          done
+          source_file: "CV.typ"
+      # - name: Get current date
+      #   id: date
+      #   run: echo "DATE=$(date +%Y-%m-%d-%H:%M | tr ':' '_')" >> $GITHUB_ENV
+      # - name: Add date to PDF
+      #   run: |
+      #     for file in **/*.pdf; do
+      #       cp "$file" "${file%.pdf}-${{ env.DATE }}.pdf"
+      #     done
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
@@ -31,8 +28,8 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "doc/main.pdf"
-          body: "PDF generated from main.typ"
+          artifacts: "cv.pdf"
+          body: "PDF generated from cv.pdf"
           commit: "main"
           tag: "latest"
           allowUpdates: true

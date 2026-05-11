@@ -6,6 +6,12 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Install fonts
+        run: |
+          mkdir -p ~/.local/share/fonts
+          curl -L -o /tmp/iosevka.zip "https://github.com/be5invis/Iosevka/releases/download/v34.0.0/PkgTTC-Iosevka-34.0.0.zip"
+          unzip /tmp/iosevka.zip -d ~/.local/share/fonts
+          fc-cache -f -v
       - name: Checkout
         uses: actions/checkout@v4
       - name: Typst

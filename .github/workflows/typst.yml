@@ -6,20 +6,17 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v4
-      # - name: Typst
-      #   uses: lvignoli/typst-action@main
-      #   with:
-      #     source_file: "CV.typ"
       - uses: typst-community/setup-typst@v4
-      - run: typst compile CV.typ CV.pdf --ignore-system-fonts --font-path assets/
-      - name: Upload PDF file
+      - name: compile PDF file
+        run: typst compile CV.typ CV.pdf --ignore-system-fonts --font-path assets/
+      - name: upload PDF file
         uses: actions/upload-artifact@v4
         with:
           name: PDF-${{ env.DATE }}
           path: "**/*.pdf"
-      - name: Create Release
+      - name: create release
         uses: ncipollo/release-action@v1
         with:
           artifacts: "CV.pdf"
@@ -27,3 +24,5 @@ jobs:
           commit: "main"
           tag: "latest"
           allowUpdates: true
+          makeLatest: true
+

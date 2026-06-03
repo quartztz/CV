@@ -6,18 +6,14 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Install fonts
-        run: |
-          mkdir -p ~/.local/share/fonts
-          curl -L -o /tmp/iosevka.zip "https://github.com/be5invis/Iosevka/releases/download/v34.0.0/PkgTTC-Iosevka-34.0.0.zip"
-          unzip /tmp/iosevka.zip -d ~/.local/share/fonts
-          fc-cache -f -v
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Typst
-        uses: lvignoli/typst-action@main
-        with:
-          source_file: "CV.typ"
+      # - name: Typst
+      #   uses: lvignoli/typst-action@main
+      #   with:
+      #     source_file: "CV.typ"
+      - uses: typst-community/setup-typst@v4
+      - run: typst compile CV.typ CV.pdf --ignore-system-fonts --font-path assets/
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:

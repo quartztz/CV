@@ -1,4 +1,4 @@
-#set page(paper: "a4", margin: (x: .55in, y: 0in))
+#set page(paper: "us-letter", margin: (x: .55in, y: 0in))
 #set align(horizon)
 #set text(font: "Public Sans", size: 10pt, hyphenate: false)
 #set par(justify: true, leading: 7pt)
@@ -12,12 +12,12 @@
   #v(4pt)
 ]
 
-#let url(to, body) = [#link(to)[#text(font: "Iosevka", size: 10pt)[⎋#body]]]
+#let url(to, body) = [#link(to)[#text(font: "Iosevka")[⎋#body]]]
 #let header(left, right) = [
   #set text(size: 11pt, weight: 600)
   #smallcaps[#left #h(1fr) #right]
   #v(-10pt)
-  #line(length: 100%, stroke: 0.4pt)
+  #line(length: 100%, stroke: 0.3pt)
   #v(-22pt)
 ]
 #let b(body) = block(
@@ -107,19 +107,19 @@
     *20+ video lectures*.
 ]
 
-// = Volunteering
-
-// #header("Open Source Contributor", "2022 - 2024")\
-// En vrai là je fais du CSLib maybe? et autres projets à la con/projets perso.
-
-// #header("Technical Manager :: Fréquence Banane", "2022 - 2024")\
-// Technical manager at #url("https://frequencebanane.ch", "Fréquence Banane"),
-// the EPFL student radio. Gained knowledge in writing code for large scale and
-// long term use, managing a technical team, and audio engineering.
-// - Maintained the *audiovisual and server infrastructure* for *80+ members*
-// (fault tolerant Python scripts, Proxmox VM management).
-// - Implemented and deployed a *full-stack website* (Strapi, VueJS) for radio
-// playback and article hosting.
+/*
+= Volunteering
+#header("Open Source Contributor", "2022 - 2024")\
+En vrai là je fais du CSLib maybe? et autres projets à la con/projets perso.
+#header("Technical Manager :: Fréquence Banane", "2022 - 2024")\
+Technical manager at #url("https://frequencebanane.ch", "Fréquence Banane"),
+the EPFL student radio. Gained knowledge in writing code for large scale and
+long term use, managing a technical team, and audio engineering.
+- Maintained the *audiovisual and server infrastructure* for *80+ members*
+(fault tolerant Python scripts, Proxmox VM management).
+- Implemented and deployed a *full-stack website* (Strapi, VueJS) for radio
+playback and article hosting.
+*/
 
 = Skills
 
@@ -128,13 +128,13 @@
   align: (right + top, left + top),
   gutter: 1em,
   [*Languages*],
-  [Italian (native), French (native), English (native),
-    German (basic).],
+  [Italian (C2), French (C2), English (C2), German (B1).],
   [*Programming*],
   [*Scala*, *Rust*, Python, C, Typescript, Dart. *Lean*,
     Stainless, Rocq],
   [*Tools*], [*Git*, *Docker*, *Typst*, Proxmox, LaTeX, Markdown.],
   [*Design*], [*Figma*, *Affinity*, Adobe Suite, Penpot.],
+  [*Social*], [Scientific Writing, Collaboration, Research],
   [*Other*], [Audio Engineering, Stagecraft, Video Editing.],
 )
 

@@ -10,6 +10,9 @@ preview: CV
 CV: 
 	typst compile CV.typ CV.pdf --font-path ./assets/ --ignore-system-fonts
 
+letter:
+	typst compile letter.typ letter.pdf --font-path ./assets/ --ignore-system-fonts
+
 clean: 
 	rm *.pdf
 

@@ -1,10 +1,10 @@
 #set page(paper: "us-letter", margin: (x: .55in, y: 0in))
 #set align(horizon)
-#set text(font: "Public Sans", size: 10pt, hyphenate: false)
+#set text(font: "Public Sans", size: 10pt, hyphenate: false) // maybe inria
 #set par(justify: true, leading: 7pt)
 #set list(indent: 0.5em, spacing: 7pt)
 
-#show list: it => block(width: 100%)[#it]
+#show list: it => block(width: 100%, inset: -0.25em)[#it]
 #show raw: set text(font: "Iosevka", size: 10pt)
 #show heading.where(level: 1): set text(weight: 600)
 #show heading: it => [
@@ -55,7 +55,9 @@
   Science_ (Lean).\
   *Activities and Societies:* Logistics Manager,
   _#url("https://clic.epfl.ch", "CLIC")_ (2024-2025); Head of Prevention,
-  _#url("https://agepoly.ch", "AGEPoly")_ (2025)
+  _#url("https://agepoly.ch", "AGEPoly")_ (2025)\
+  *Relevant Coursework:* _Interactive Theorem Proving_, _Formal Verification_,
+    _Advanced Compiler Construction_.
 ]
 
 #header("BSc in Computer Science :: EPFL", "2021 - 2024")\
@@ -69,17 +71,17 @@
 
 = Experience
 
-#header("Research Intern :: Jetbrains", "Mar. 2026 - Aug. 2026")\
+#header("Research Intern :: JetBrains", "Mar. 2026 - Aug. 2026")\
 #b[
-  Intern in the Jetbrains Formalisation Team, working on the design and 
+  Intern in the Formalisation Team at JetBrains, working on the design and 
   formalization of a type system for uniqueness types for the Kotlin 
   programming language.
   - Designed and implemented the first generic framework for *formally verified
     dataflow analysis* in `Lean`.
-  - Designed languages and analyses to explore the framework's guarantees on
+  - Designed *languages and analyses* to explore the framework's guarantees on
     Kotlin-like language constructs.
-  - Co-authored the publication _Formally Verified Dataflow Analysis in `Lean`_ 
-    (Moretti & Wojnarowski, 2026)
+  - Co-authored the *publication* _Formally Verified Dataflow Analysis in `Lean`_ 
+    (Moretti & Wojnarowski, 2026) // inshallah
 ]
 
 #header("Chief Product Officer :: Actualia", "Sept. 2024 - Oct. 2025")\
@@ -130,9 +132,8 @@ playback and article hosting.
   [*Languages*],
   [Italian (C2), French (C2), English (C2), German (B1).],
   [*Programming*],
-  [*Scala*, *Rust*, Python, C, Typescript, Dart. *Lean*,
-    Stainless, Rocq],
-  [*Tools*], [*Git*, *Docker*, *Typst*, Proxmox, LaTeX, Markdown.],
+  [*Scala*, *Rust*, Python, Typescript, Dart. *Lean*, Stainless, Rocq],
+  [*Tools*], [*Git*, *Docker*, *Typst*, Proxmox, LaTeX.],
   [*Design*], [*Figma*, *Affinity*, Adobe Suite, Penpot.],
   [*Social*], [Scientific Writing, Collaboration, Research],
   [*Other*], [Audio Engineering, Stagecraft, Video Editing.],
